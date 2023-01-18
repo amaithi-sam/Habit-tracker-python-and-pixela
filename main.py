@@ -4,7 +4,8 @@
 
 from datetime import datetime
 import requests
-
+import os
+import time
 
 #------------------- UPDATE THE DETAILES BELOW------------
 
@@ -70,7 +71,7 @@ def post_a_pixel():
 
     POST_PIXEL_ENDPOINT = f"{PIXELA_ENDPOINT}/{USERNAME}/graphs/{GRAPH_ID}"
 
-    quantity = float(input("How many Minutes did you perform Coding today?\n"))
+    quantity = input("How many Minutes did you perform Coding today?\n")
 
     POST_PIXEL_CONFIG = {
         "date": TODAY,
@@ -92,7 +93,7 @@ def update_pixel():
 
     UPDATE_PIXEL_ENDPOINT = f"{PIXELA_ENDPOINT}/{USERNAME}/graphs/{GRAPH_ID}/{date}"
 
-    quantity = float(input(f"How many Minutes did you perform Coding on {date}?\n"))
+    quantity = input(f"How many Minutes did you perform Coding on {date}?\n")
 
     UPDATE_PIXEL_CONFIG = {
         "quantity": quantity,
@@ -127,33 +128,44 @@ def view_graph():
 #------------------------------------------------------------
     
 if __name__ == "__main__":
-    
-    choice = input("""
+   
+    while True: 
+        
+        time.sleep(2)
+        os.system('cls||clear')
+        
+        choice = int(input("""
+                           WELCOME TO AMAITHI'S HABIT TRACKER POWERED BY PIXELA \n
                 Would you like to:
                     1 - Post a pixel
                     2 - Update a pixel
-                    3 - Delete a pixel
-                    \n
+                    3 - Delete a pixel \n
                     4 - Create a New account
                     5 - Create a New Graph
                     6 - View The Graph
-                    7 - Delete a Graph
-                    """)
-    
-    if choice == "1" & choice in range(1,7):
-        post_a_pixel
-    elif choice =="2":
-        update_pixel
-    elif choice == "3":
-        del_pixel
-    elif choice == "4":
-        new_user
-    elif choice == "5":
-        new_graph
-    elif choice == "6":
-        view_graph
-    elif choice == "7":
-        delete_graph
-    else:
-        print("kindly choose Between 1 & 7")
-        choice
+                    7 - Delete a Graph \n
+                    0 - To Exit
+                    
+                    Enter the Number Pointed to the Task You wanna Perform \n\t
+                    """))
+        
+        if choice == 1:
+            post_a_pixel()
+        elif choice ==2:
+            update_pixel()
+        elif choice == 3:
+            del_pixel()
+        elif choice == 4:
+            new_user()
+        elif choice == 5:
+            new_graph()
+        elif choice == 6:
+            view_graph()
+        elif choice == 7:
+            delete_graph()
+        elif choice == 0:
+            break
+        else:
+            print("kindly choose Between 0 & 7")
+        
+        
