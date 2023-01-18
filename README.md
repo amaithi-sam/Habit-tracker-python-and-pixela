@@ -13,41 +13,18 @@ performed by API. And, it's free.
 [Link to Pixela Official site ](https://pixe.la/)
 
 
-## Screenshots
-
-![Pixela Homepage](https://github.com/amaithi-sam/Habit-tracker-python-and-pixela/blob/main/screenshot/Screenshot%20from%202023-01-16%2017-58-42.png?raw=true)
 
 
-## Documentation
+![Pixela](https://github.com/amaithi-sam/Habit-tracker-python-and-pixela/blob/main/screenshot/Screenshot%20from%202023-01-16%2017-58-42.png?raw=true)
 
-[Documentation](https://linktodocumentation)
+## Habit Tracker Screenshot
+
+![Habit Tracker](https://github.com/amaithi-sam/Habit-tracker-python-and-pixela/blob/main/screenshot/Screenshot%20from%202023-01-19%2000-40-09.png?raw=true)
 
 
-## API Reference
+## Pixela API Documentation
 
-#### Get all items
-
-```http
-  GET /api/items
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-#### Get item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
-
-#### add(num1, num2)
-
-Takes two numbers and returns the sum.
+[Link - API Documentation](https://docs.pixe.la/)
 
 
 ## Run Locally
